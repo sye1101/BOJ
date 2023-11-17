@@ -2,7 +2,6 @@ package Q2667;
 
 import java.util.*;
 
-//백준 2667번
 public class Main {
 
     //방향키
