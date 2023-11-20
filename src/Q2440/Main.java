@@ -1,26 +1,21 @@
-package Q2750;
+package Q2440;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.StringTokenizer;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-
-        int[] num = new int[n];
+        int tmp = n;
         for (int i = 0; i < n; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            num[i] = Integer.parseInt(st.nextToken());
-        }
-        Arrays.sort(num);
-
-        for (int s : num) {
-            System.out.println(s);
+            for (int j = tmp; j > 0; j--) {
+                System.out.print("*");
+            }
+            tmp--;
+            System.out.println();
         }
     }
 }

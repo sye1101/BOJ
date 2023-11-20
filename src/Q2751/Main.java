@@ -1,10 +1,10 @@
-package Q2750;
+package Q2751;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 
@@ -12,15 +12,17 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        int[] num = new int[n];
+        ArrayList<Integer> al = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            num[i] = Integer.parseInt(st.nextToken());
+            al.add(Integer.parseInt(br.readLine()));
         }
-        Arrays.sort(num);
+        Collections.sort(al);
 
-        for (int s : num) {
-            System.out.println(s);
+        StringBuilder sb = new StringBuilder();
+
+        for (int s : al) {
+            sb.append(s).append('\n');
         }
+        System.out.println(sb);
     }
 }
